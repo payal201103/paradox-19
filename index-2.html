@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+	.colorRed{
+		background: red;
+		color: white;
+		padding: 20px;
+		margin: 10px;
+	}
+	.colorBlue{
+		background: blue;
+		color: white;
+		padding: 20px;
+		margin: 10px;
+	}
+	.fontstyle{
+		font-size: 30px;
+	}
+</style>
+<script>
+	function removeCss(){
+		const myDiv = document.querySelector('#myDiv');
+  		myDiv.classList.remove("colorRed");
+	}
+	function addCss(){
+		const myDiv = document.querySelector('#myDiv');
+  		myDiv.classList.add("colorRed");
+	}
+	
+	function toggleCss(){
+		const myDiv = document.querySelector('#myDiv');
+  		myDiv.classList.toggle("colorRed");
+	}
+	function replaceCss(){
+		const myDiv = document.querySelector('#myDiv');
+  		myDiv.classList.replace("colorRed", "colorBlue");
+	}
+	function appendCss(){
+		const myDiv = document.querySelector('#myDiv');
+  		myDiv.classList.add("fontstyle");
+	}
+</script>
+<body>
+    <h1>Add,remove and replace the classes</h1>
+    <br>
+        <div id="myDiv">Add / Remove / Togal / Replace Clss</div>
+	<button onClick="addCss();">Add Class</button>
+	<button onClick="removeCss();">Remove Class</button>	
+	<button onClick="toggleCss();">Toggle Class</button>
+	<button onClick="replaceCss();">Replace "colorRed" with "colorBlue" Class</button>
+	<button onClick="appendCss();">Append "fontstyle" Class</button>
+</body>
+</html>

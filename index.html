@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Getting and setting the attribute</h1>
+
+    <body>
+        <a id="a" href="#welcome">Wel-come</a>
+        <script>
+
+            alert(a.getAttribute('href'));
+            alert(a.href); 
+        </script>
+        <div show-info="siteName"></div>
+        <div show-info="bookName"></div>
+        <script>
+            let site = {
+                siteName: "MY Site",
+                bookName: "Javascript"
+            };
+            for (let div of document.querySelectorAll('[show-info]')) {
+
+                let field = div.getAttribute('show-info');
+                div.innerHTML = site[field];
+            }
+        </script>
+    </body>
+</body>
+
+</html>
